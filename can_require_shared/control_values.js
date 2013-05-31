@@ -9,7 +9,7 @@ define([], function () {
 
 		'input[name=price] keyup': function (ele, ev) {
 			this.options.model.attr('price', ele.val());
-		},
+		},		
 
 		'input[name=taxRate] keyup': function (ele, ev) {
 			this.options.model.attr('taxRate', ele.val());

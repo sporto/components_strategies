@@ -31,29 +31,34 @@
 					<div id="control_items">
 						<form class="pure-form pure-form-stacked">
 							<fieldset>
-								<legend>Qty</legend>
+								<legend>Items</legend>
 								<div class="placeholder"></div>
 							</fieldset>
 						</form>
 						<script id="control_items_template" type="text/mustache">
 							<label for="price">Qty</label>
 							<input type="text" name="qty" value="{{model.qty}}" /> <br />
-							Sub Total: {{model.subtotal}} <br />
+							<label>Sub Total</label>{{model.subTotal}} <br />
 						</script>
 					</div>
 				</div>
 				<div class="pure-u-1-3">
 					<div id="control_totals">
-						<form class="pure-form pure-form-stacked">
+						<form class="pure-form pure-form">
 							<fieldset>
 								<legend>Totals</legend>
 								<div class="placeholder"></div>
 							</fieldset>
 						</form>
 						<script id="control_totals_template" type="text/mustache">
-							Tax Rate: {{model.taxRate}} <br />
-							Tax: {{model.tax}} <br />
-							Total: {{model.total}} <br />
+							<label>Sub Total</label>
+							{{model.subTotal}} <br />
+							<label>Tax Rate</label>
+							{{model.taxRate}} <br />
+							<label>Tax</label>
+							{{model.tax}} <br />
+							<label>Total</label>
+							{{model.total}} <br />
 						</script>
 					</div>
 
