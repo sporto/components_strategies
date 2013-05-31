@@ -4,8 +4,9 @@ define(['control_values', 'control_items', 'control_totals'],
 	return Control = can.Control({
 		init: function (ele, options) {
 			this.model = new can.Observe({
-				price: 100,
-				qty: 1
+				price: 200,
+				taxRate: 15,
+				qty: 10
 			});
 
 			new ControlValues('#control_values', {model: this.model});

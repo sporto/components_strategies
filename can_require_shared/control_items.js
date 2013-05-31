@@ -4,6 +4,12 @@ define([], function () {
 		init: function (ele, options) {
 			var self = this;
 
+			var subtotalCompute = can.compute(function () {
+				return self.options.model.attr('price') * self.options.model.attr('qty');
+			});
+
+			this.options.model.attr('subtotal', subtotalCompute);
+
 			var template = can.view("#control_items_template", {model: this.options.model});
 			can.$('.placeholder', this.element).append(template);
 		},

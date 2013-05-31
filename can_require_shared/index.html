@@ -22,6 +22,8 @@
 						<script id="control_values_template" type="text/mustache">
 							<label for="price">Price</label>
 							<input type="text" name="price" value="{{model.price}}"/>
+							<label for="taxRate">Tax Rate</label>
+							<input type="number" name="taxRate" value="{{model.taxRate}}"/>
 						</script>
 					</div>
 				</div>
@@ -36,7 +38,7 @@
 						<script id="control_items_template" type="text/mustache">
 							<label for="price">Qty</label>
 							<input type="text" name="qty" value="{{model.qty}}" /> <br />
-							Sub Total: {{model.total}} <br />
+							Sub Total: {{model.subtotal}} <br />
 						</script>
 					</div>
 				</div>
@@ -49,6 +51,8 @@
 							</fieldset>
 						</form>
 						<script id="control_totals_template" type="text/mustache">
+							Tax Rate: {{model.taxRate}} <br />
+							Tax: {{model.tax}} <br />
 							Total: {{model.total}} <br />
 						</script>
 					</div>
