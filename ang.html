@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<script src="components/jquery/jquery.js"></script>
+		<script src="components/angular/angular.js"></script>
+		<script src="components/requirejs/require.js"></script>
+		<script src="ang.js"></script>
+	</head>
+	<body>
+		<div id="main">
+			{{price}}
+			<div id="c1">
+				<h2>C1</h2>
+				Price: {{price}} <br />
+				Factor: {{factor}} <br />
+				Total: {{price * factor}} <br />
+				<script>
+					//$(function () {
+						requirejs(['angc1'], function(main) {
+							main.init('#c1');
+						});
+					//});
+				</script>
+			</div>
+			<div id="c2">
+				<h2>C2</h2>
+				Price: {{price}} <br />
+				Factor: {{factor}} <br />
+				Total: {{price * factor}} <br />
+				<script>
+					//$(function () {
+						requirejs(['angc2'], function(main) {
+							main.init('#c2');
+						});
+					//});
+				</script>
+			</div>
+			
+			<script>
+				//$(function () {
+					requirejs(['angmain'], function(main) {
+						main.init('#main');
+					});
+				//});
+			</script>
+
+		</div>
+	</body>
+</html>

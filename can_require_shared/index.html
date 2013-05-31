@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script src="../components/jquery/jquery.js"></script>
+		<script src="../components/CanJS/can.jquery.js"></script>
+		<script src="../components/CanJS/can.view.mustache.js"></script>
+		<script src="../components/requirejs/require.js"></script>
+	</head>
+	<body>
+		<h2>Shared objects using CanJS</h2>
+		<ul>
+			<li>The parent controler intializes the children</li>
+			<li>There is a shared object between them</li>
+			<li>May be faster</li>
+			<li>Components are not self contained</li>
+			<li>But if necessary we could add a wrapper to initialize them, so no big deal</li>
+		</ul>
+		<div id="main">
+			<div class="placeholder"></div>
+			
+			<div id="c1">
+				<h2>C1</h2>
+				<div class="placeholder"></div>
+				<script id="c1template" type="text/mustache">
+					Price: {{model.price}} <br />
+					Factor: {{model.factor}} <br />
+					Total: {{model.total}} <br />
+				</script>
+			</div>
+			
+			<div id="c2">
+				<h2>C2</h2>
+				<div class="placeholder"></div>
+				<script id="c2template" type="text/mustache">
+					Price: {{model.price}} <br />
+					Factor: {{model.factor}} <br />
+					Total: {{model.price * model.factor}} <br />
+				</script>
+			</div>
+			
+			<script id="maintemplate" type="text/mustache">
+				Price: {{model.price}} <br />
+				<input type="text" name="price" value="{{model.price}}"/>
+			</script>
+
+			<script>
+				//$(function () {
+					requirejs(['main'], function(Control) {
+						var $ele = $("#main");
+						return new Control($ele);
+					});
+				//});
+			</script>
+
+		</div>
+	</body>
+</html>

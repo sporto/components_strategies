@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<script src="../components/jquery/jquery.js"></script>
+		<script src="../components/CanJS/can.jquery.js"></script>
+		<script src="../components/CanJS/can.view.mustache.js"></script>
+		<script src="../components/requirejs/require.js"></script>
+	</head>
+	<body>
+		<h2>Events using CanJS</h2>
+		<ul>
+			<li>Each components has its own initialization</li>
+			<li>Messages are passed through events</li>
+		</ul>
+		<div id="main">
+			<div class="placeholder"></div>
+			
+			<div id="c1">
+				<h2>C1</h2>
+				<div class="placeholder"></div>
+				<script id="c1template" type="text/mustache">
+					Price: {{model.price}} <br />
+					Factor: {{model.factor}} <br />
+					Total: {{model.total}} <br />
+				</script>
+				<script>
+					//$(function () {
+						requirejs(['c1'], function(main) {
+							main.init('#c1');
+						});
+					//});
+				</script>
+			</div>
+			
+			<div id="c2">
+				<h2>C2</h2>
+				<div class="placeholder"></div>
+				<script id="c2template" type="text/mustache">
+					Price: {{model.price}} <br />
+					Factor: {{model.factor}} <br />
+					Total: {{model.price * model.factor}} <br />
+				</script>
+				<script>
+					//$(function () {
+						requirejs(['c2'], function(main) {
+							main.init('#c2');
+						});
+					//});
+				</script>
+			</div>
+			
+			<script id="maintemplate" type="text/mustache">
+				Price: {{model.price}} <br />
+				<input type="text" name="price" value="{{model.price}}"/>
+			</script>
+
+			<script>
+				//$(function () {
+					requirejs(['main'], function(main) {
+						main.init('#main');
+					});
+				//});
+			</script>
+
+		</div>
+	</body>
+</html>
