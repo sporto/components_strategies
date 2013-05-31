@@ -1,0 +1,20 @@
+{
+  "name": "components_strategies",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sporto/components_strategies.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "readme.md",
+  "gitHead": "a5e1bbce6fa7a35962702212bca00959de94e933",
+  "dependencies": {
+    "hapi": "~1.6.2"
+  }
+}
