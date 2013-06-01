@@ -8,6 +8,8 @@ module.exports = function (server) {
 	var can_require_shared = function (request) {
 			request.reply.view('can_require_shared/index.html', { });
 		}
+		
+// 		var config = {cache: { expiresIn: 100 }}
 
 	server.route([
 		{ method: 'GET', path: '/', handler: index },
