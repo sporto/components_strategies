@@ -1,0 +1,13 @@
+<div id="control_items">
+	<form class="pure-form pure-form-stacked">
+		<fieldset>
+			<legend>Items</legend>
+			<div class="placeholder"></div>
+		</fieldset>
+	</form>
+	<script id="control_items_template" type="text/mustache">
+		<label for="price">Qty</label>
+		<input type="text" name="qty" value="{{model.qty}}" /> <br />
+		<label>Sub Total</label>{{model.subTotal}} <br />
+	</script>
+</div>

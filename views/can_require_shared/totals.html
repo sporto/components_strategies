@@ -1,0 +1,18 @@
+<div id="control_totals">
+	<form class="pure-form pure-form">
+		<fieldset>
+			<legend>Totals</legend>
+			<div class="placeholder"></div>
+		</fieldset>
+	</form>
+	<script id="control_totals_template" type="text/mustache">
+		<label>Sub Total</label>
+		{{model.subTotal}} <br />
+		<label>Tax Rate</label>
+		{{model.taxRate}} <br />
+		<label>Tax</label>
+		{{model.tax}} <br />
+		<label>Total</label>
+		{{model.total}} <br />
+	</script>
+</div>

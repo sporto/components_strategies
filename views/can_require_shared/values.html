@@ -1,0 +1,14 @@
+<div id="control_values">
+	<form class="pure-form pure-form-stacked">
+		<fieldset>
+			<legend>Values</legend>
+			<div class="placeholder"></div>
+		</fieldset>
+	</form>
+	<script id="control_values_template" type="text/mustache">
+		<label for="price">Price</label>
+		<input type="text" name="price" value="{{model.price}}"/>
+		<label for="taxRate">Tax Rate</label>
+		<input type="number" name="taxRate" value="{{model.taxRate}}"/>
+	</script>
+</div>
