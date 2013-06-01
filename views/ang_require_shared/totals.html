@@ -1,0 +1,15 @@
+<div id="control_totals" ng-controller="TotalsCtrl">
+	<form class="pure-form pure-form">
+		<fieldset>
+			<legend>{{title}}</legend>
+			<label>Sub Total</label>
+			{{model.subTotal()}} <br />
+			<label>Tax Rate</label>
+			{{model.taxRate}} <br />
+			<label>Tax</label>
+			{{model.tax()}} <br />
+			<label>Total</label>
+			{{model.total()}} <br />
+		</fieldset>
+	</form>
+</div>

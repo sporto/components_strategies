@@ -4,9 +4,9 @@ define(['/js/can_require_shared/values.js', '/js/can_require_shared/items.js', '
 	return Control = can.Control({
 		init: function (ele, options) {
 			this.model = new can.Observe({
-				price: 200,
-				taxRate: 15,
-				qty: 10
+				price: 100,
+				taxRate: 20,
+				qty: 5
 			});
 
 			new ControlValues('#control_values', {model: this.model});

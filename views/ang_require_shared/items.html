@@ -1,0 +1,10 @@
+<div id="control_items" ng-controller="ItemsCtrl">
+	<form class="pure-form pure-form-stacked">
+		<fieldset>
+			<legend>{{title}}</legend>
+			<label for="price">Qty</label>
+			<input type="text" name="qty" ng-model="model.qty" /> <br />
+			<label>Sub Total</label>{{model.subTotal()}}<br />
+		</fieldset>
+	</form>
+</div>
